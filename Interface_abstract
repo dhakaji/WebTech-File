@@ -1,0 +1,25 @@
+import java.util.*;
+abstract class Animal{
+    String name,species;
+    Animal(String n,String s){
+        name =n;
+        species=s;
+    }
+    void eat(String food){
+        System.out.println("species "+name+" like to eat "+food);
+    }
+    abstract void sound();
+}
+class Lion extends Animal{
+    Lion(){
+        super("lion","asian");
+    }
+    void sound(){
+        System.out.println("lion roars!");
+    }
+    public static void main(String []args){
+        Lion l=new Lion();
+        l.eat("flesh");
+        l.sound();
+    }
+}
