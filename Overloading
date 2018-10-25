@@ -1,0 +1,18 @@
+import java.util.*;
+class OverLoad{
+    void show(int a){
+        System.out.println("Integer value "+a);
+    }
+    void show(double a){
+        System.out.println("Double value "+a);
+    }
+    void show(float a){
+        System.out.println("Float value "+a);
+    }
+    public static void main(String []args){
+        OverLoad s=new OverLoad();
+        s.show(12);
+        s.show(12.33);
+        s.show(12.2341);
+    }
+}
