@@ -1,0 +1,39 @@
+import java.util.*;
+interface Stack{
+    void push();
+    void pop();
+    void empty();
+}
+class Stack_Test implements Stack{
+    int n,top;
+    public void push(){
+        System.out.println("enter the dimensions :");
+        Scanner sc=new Scanner(System.in);
+        n=sc.nextInt();
+        int []a=new int[n];
+        System.out.println("enter the elements");
+        for(int i=0;i<n;i++)
+        a[i]=sc.nextInt();
+        top++;
+    }
+    public void pop(){
+        if(top==-1)
+        System.out.println("stack is empty");
+        else{
+            top--;
+        }
+    }
+    public void empty(){
+        if(top==-1){
+            System.out.println("stack is empty");
+        }
+        else
+        System.out.println("stack is not empty");
+    }
+    public static void main(String []args){
+        Stack_Test s=new Stack_Test();
+        s.push();
+        s.empty();
+        s.pop();
+    }
+}
